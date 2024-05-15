@@ -15,7 +15,8 @@ def generate_launch_description():
     rviz_satellite_node = Node(
         package='rviz_satellite',
         executable='publish_demo_data',
-        arguments=['51.424', '5.4943']
+        # arguments=['51.424', '5.4943']
+        arguments=['34.64788622485221', '135.75892322235143'] # 奈良高専の緯度経度
     )
 
     tf2_ros_node = Node(
