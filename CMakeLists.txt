@@ -67,8 +67,10 @@ install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}
 )
 
 # Install demo
-install(FILES demo/demo.launch.xml
-  DESTINATION share/${PROJECT_NAME}/launch)
+install(
+  DIRECTORY launch demo rviz
+  DESTINATION share/${PROJECT_NAME}/
+)
 install(PROGRAMS demo/publish_demo_data
   DESTINATION lib/${PROJECT_NAME})
 
